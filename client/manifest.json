@@ -1,0 +1,12 @@
+{
+    "manifest_version": 3,
+    "name": "child_tracker",
+    "version": "1.0",
+    "permissions": ["<all_urls>"],
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+      }
+    ]
+  }
