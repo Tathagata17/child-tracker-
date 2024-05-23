@@ -1,8 +1,8 @@
 const express=require("express");
 const bodyParser=require("body-parser");
 const cors=require("cors");
-const accountSid = 'ACed16fff52ae1c9e109abe14d9190509c';
-const authToken = '00ecd122a2d72137f6aaf791a6b4da33';
+const accountSid = 'happy';
+const authToken = 'happyhappy';
 const twilio=  require("twilio")(accountSid,authToken);
 
 
@@ -19,8 +19,8 @@ app.post("/post",(req,res)=>
     const date=new Date();
     twilio.messages.create({
         body:"user vistited " +hostname +" at time "+date.getHours()+":"+date.getMinutes(),
-        from: 'whatsapp:+14155238886',
-        to: 'whatsapp:+917477759422'
+        from: 'whatsapp:+1',
+        to: 'whatsapp:+91'
     }).then((msg)=>{console.log(msg.sid+hostname)})
     .catch((err)=>{console.log(err)})
 });
